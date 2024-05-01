@@ -32,5 +32,7 @@ grid = GridSearchCV(param_grid=params, estimator=knn, verbose=1)
 grid.fit(X_train, y_train)
 y_pred = grid.predict(X_test)
 
+print('K-NEAREST NEIGHBORS - MULTI CLASS')
 print(classification_report(y_test, y_pred))
+print('\nCONFUSION MATRIX')
 print(confusion_matrix(y_test, y_pred))
